@@ -1,0 +1,10 @@
+2021-05-29T11:52:03+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/ecaveadmin/public_html/elton/wp-content/themes/zakra/inc/woocommerce.php:150
+Stack trace:
+#0 /home/ecaveadmin/public_html/elton/wp-content/themes/zakra/inc/woocommerce.php(178): zakra_woocommerce_cart_link()
+#1 /home/ecaveadmin/public_html/elton/wp-includes/class-wp-hook.php(292): zakra_woocommerce_header_cart('')
+#2 /home/ecaveadmin/public_html/elton/wp-includes/plugin.php(212): WP_Hook->apply_filters('', Array)
+#3 /home/ecaveadmin/public_html/elton/wp-content/themes/zakra/inc/template-functions.php(405): apply_filters('zakra_woocommer...', '')
+#4 /home/ecaveadmin/public_html/elton/wp-includes/class-wp-hook.php(292): zakra_insert_primary_menu_item('<li id="menu-it...', Object(stdClass))
+#5 /home/ecaveadmin/public_html/elton/wp-includes/plugin.php(212): WP_Hook->apply_filters('<li id="menu-it...', Array)
+#6 /home/ecaveadmin/public_html/elton/wp-includes/nav-menu-template.php(259): apply_filters('wp_nav_menu_ite...', '<li id=" in /home/ecaveadmin/public_html/elton/wp-content/themes/zakra/inc/woocommerce.php on line 150
+

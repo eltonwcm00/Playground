@@ -1,0 +1,48 @@
+https://stackoverflow.com/questions/37101412/404-error-and-redirect-after-moving-wordpress-site-from-live-to-localhost
+
+************************************
+*********WP Host Migration**********
+************************************
+
+
+
+
+
+
+Add the following code to wp-config.php file. this will override site url and home url.
+
+define('WP_HOME','http://example.com');
+define('WP_SITEURL','http://example.com');
+Now, You have add more 2 lines to your functions.php file of your active theme, so this will override your theme options.
+
+update_option( 'siteurl', 'http://example.com' );
+update_option( 'home', 'http://example.com' );
+But this the temporary solution , you need to find and replace url form database you can also use sql query to update. Following query will useful
+
+UPDATE wp_options SET option_value = replace(option_value, 'http://olddomain.com', 'http://newdomain.com') WHERE option_name = 'home' OR option_name = 'siteurl';
+
+UPDATE wp_posts SET guid = replace(guid, 'http://olddomain.com','http://newdomain.com');
+
+UPDATE wp_posts SET post_content = replace(post_content, 'http://olddomain.com', 'http://newdomain.com');
+
+UPDATE wp_postmeta SET meta_value = replace(meta_value, 'http://olddomain.com', 'http://new
+
+
+
+**************************
+*********404 Fix**********
+**************************
+
+https://www.youtube.com/watch?v=fOo-6NqUmkU
+
+
+
+
+
+
+**************************
+*********Login**********
+**************************
+username: eltonwcm00
+pass: 0172711688
+
